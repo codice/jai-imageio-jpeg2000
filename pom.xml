@@ -142,7 +142,7 @@
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
         <extensions>true</extensions>
-        <version>2.3.7</version>
+        <version>5.1.9</version>
         <configuration>
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
@@ -346,12 +346,9 @@
     </distributionManagement>
   <repositories>
     <repository>
-      <id>bintray-jai-imageio</id>
-      <name>jai-imageio at bintray</name>
-      <url>http://dl.bintray.com/jai-imageio/maven/</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
     </repository>
   </repositories>
 </project>
