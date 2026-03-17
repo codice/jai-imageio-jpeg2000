@@ -222,12 +222,7 @@ public class EBCOTRateAllocator extends PostCompRateAllocator {
 
         // If we do timing create necessary structures
         if (DO_TIMING) {
-            // If we are timing make sure that 'finalize' gets called.
-            System.runFinalizersOnExit(true);
-            // The System.runFinalizersOnExit() method is deprecated in Java
-            // 1.2 since it can cause a deadlock in some cases. However, here
-            // we use it only for profiling purposes and is disabled in
-            // production code.
+            // runFinalizersOnExit removed - not available in JDK 11+
             initTime = 0L;
             buildTime = 0L;
             writeTime = 0L;

@@ -957,8 +957,7 @@ public class StdEntropyCoder extends EntropyCoder
         // If we do timing create necessary structures
         if (DO_TIMING) {
             time = new long[src.getNumComps()];
-            // If we are timing make sure that 'finalize' gets called.
-            System.runFinalizersOnExit(true);
+            // runFinalizersOnExit removed - not available in JDK 11+
         }
 
         // If using multithreaded implementation get necessasry objects
